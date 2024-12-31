@@ -1,4 +1,4 @@
-# Dockitup
+# Docitup
   
 This package provides various document loaders that utilize different methods for processing and chunking documents. It is designed to facilitate the loading of documents in various formats into a structured format suitable for using them with langchain vector databases
   
@@ -15,7 +15,7 @@ The package includes the following loaders:
 To install this package, simply run:  
   
 ```bash  
-pip install dockitup 
+pip install docitup 
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ pip install dockitup
 ### PyMUPdf4LLMLoader
  
 ```bash
-from dockitup.pymupdf4llm_loaders import PyMUPdf4LLMLoader 
+from docitup.pymupdf4llm_loaders import PyMUPdf4LLMLoader 
   
 loader = PyMUPdf4LLMLoader(file_path='path/to/your/file.pdf')  
 documents = loader.load()   
@@ -33,7 +33,7 @@ documents = loader.load()
 ### MarkitdownLoader
 
 ```python
-from dockitup.markitdown_loaders import MarkitDownLoader
+from docitup.markitdown_loaders import MarkitDownLoader
   
 loader = MarkitdownLoader(file_path='path/to/your/file.md')  
 documents = loader.load()  
@@ -42,7 +42,7 @@ documents = loader.load()
 ### LlamaparseLoader
 
 ```python
-from dockitup.llamaparse_loaders import LlamaparseLoader
+from docitup.llamaparse_loaders import LlamaparseLoader
 from llama_parse.utils import ResultType
   
 loader = LlamaparseLoader(file_path='path/to/your/directory', result_type=ResultType.MD, api_key='your_api_key')  
@@ -51,7 +51,7 @@ documents = loader.load()
 
 ### DoclingPDFLoader
 ```python
-from dockitup.docling_loaders import DoclingLoader
+from docitup.docling_loaders import DoclingLoader
   
 loader = DoclingLoader(file_path='path/to/your/file.pdf')  
 documents = loader.load()
