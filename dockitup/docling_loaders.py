@@ -6,6 +6,7 @@ from typing import Iterator
 
 class DoclingPDFLoader(BaseLoader):
     def __init__(self, file_path: str | list[str]) -> None:
+        super().__init__()
         self._file_paths = file_path if isinstance(file_path, list) else [file_path]
         self._converter = DocumentConverter()
 
