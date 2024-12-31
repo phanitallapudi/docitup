@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "docitup"
+version = "0.1.0"
+description = ""
+authors = ["Panindhra <phanitallapudi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+docling = "^2.14.0"
+langchain-community = "^0.3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
