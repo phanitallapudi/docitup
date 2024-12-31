@@ -2,7 +2,7 @@ from markitdown import MarkItDown # type: ignore
 from langchain_community.document_loaders.base import BaseLoader
 from langchain_core.document_loaders import BaseLoader
 from langchain_core.documents import Document as LCDocument
-from typing import Iterator, List
+from typing import Iterator, List, Optional
 
 from .base_loaders import BaseLoader as LCBaseLoader
 
@@ -10,12 +10,14 @@ class MarkitdownLoader(BaseLoader, LCBaseLoader):
     def __init__(
             self, 
             file_path: str | list[str],
-            chunk_size: int = 1000,
-            chunk_overlap: int = 100
+            splitter_type: Optional[str] = "recursive", 
+            chunk_size: Optional[int] = 1000,
+            chunk_overlap: Optional[int] = 100
         ) -> None:
         super().__init__()
         self._file_paths = file_path if isinstance(file_path, list) else [file_path]
         self.markitdown = MarkItDown()
+        self.splitter_type = splitter_type
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
 
