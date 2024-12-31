@@ -12,6 +12,7 @@ langchain-community = "^0.3.13"
 llama-parse = "^0.5.19"
 langchain = "^0.3.13"
 llama-index-readers-file = "^0.4.1"
+markitdown = "^0.0.1a3"
 
 
 [build-system]
