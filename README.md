@@ -5,10 +5,10 @@ This package provides various document loaders that utilize different methods fo
 ## Overview  
   
 The package includes the following loaders:  
-- **PyMUPdf4LLMLoader**: Loads and splits documents from PDF files using the `pymupdf4llm` library.  
-- **MarkitdownLoader**: Loads Markdown documents using the `MarkItDown` library.  
+- **PyMUPdf4LLMLoader**: Loads and splits documents from files using the `pymupdf4llm` library.  
+- **MarkitdownLoader**: Loads documents using the `MarkItDown` library.  
 - **LlamaparseLoader**: Loads documents using the `LlamaParse` library and processes different file types.  
-- **DoclingPDFLoader**: Converts PDF documents to Markdown and splits them accordingly.  
+- **DoclingPDFLoader**: Converts documents to text and splits them accordingly.  
   
 ## Installation  
   
@@ -58,11 +58,13 @@ documents = loader.load()
 ```
 
 ## Configuration Options
- 
+
 Each loader can be configured with the following optional parameters:
 
 `splitter_type`: The type of text splitter to use ("recursive" or other).
+
 `chunk_size`: The size of each chunk (default is 1000).
+
 `chunk_overlap`: The number of overlapping characters between chunks (default is 100).
 
 ## Contributing
