@@ -24,7 +24,7 @@ pip install docitup
 ### PyMUPdf4LLMLoader
  
 ```bash
-from docitup.pymupdf4llm_loaders import PyMUPdf4LLMLoader 
+from docitup import PyMUPdf4LLMLoader 
   
 loader = PyMUPdf4LLMLoader(file_path='path/to/your/file.pdf')  
 documents = loader.load()   
@@ -33,7 +33,7 @@ documents = loader.load()
 ### MarkitdownLoader
 
 ```python
-from docitup.markitdown_loaders import MarkitDownLoader
+from docitup import MarkitDownLoader
   
 loader = MarkitdownLoader(file_path='path/to/your/file.md')  
 documents = loader.load()  
@@ -42,7 +42,7 @@ documents = loader.load()
 ### LlamaparseLoader
 
 ```python
-from docitup.llamaparse_loaders import LlamaparseLoader
+from docitup import LlamaparseLoader
 from llama_parse.utils import ResultType
   
 loader = LlamaparseLoader(file_path='path/to/your/directory', result_type=ResultType.MD, api_key='your_api_key')  
@@ -51,7 +51,7 @@ documents = loader.load()
 
 ### DoclingPDFLoader
 ```python
-from docitup.docling_loaders import DoclingLoader
+from docitup import DoclingLoader
   
 loader = DoclingLoader(file_path='path/to/your/file.pdf')  
 documents = loader.load()
