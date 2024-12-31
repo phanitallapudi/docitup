@@ -13,6 +13,7 @@ llama-parse = "^0.5.19"
 langchain = "^0.3.13"
 llama-index-readers-file = "^0.4.1"
 markitdown = "^0.0.1a3"
+pymupdf4llm = "^0.0.17"
 
 
 [build-system]
