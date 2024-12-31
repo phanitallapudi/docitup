@@ -19,6 +19,9 @@ setup(
         "markitdown>=0.0.1a3",
         "pymupdf4llm>=0.0.17",
     ],
+    extras_require={
+        "dev": ["pytest>=7.0", "twine>=4.0.2"],
+    },
     python_requires=">=3.12",  # as per your Python version requirement in the toml file
     classifiers=[  # typical classifiers for PyPI
         "Programming Language :: Python :: 3",
