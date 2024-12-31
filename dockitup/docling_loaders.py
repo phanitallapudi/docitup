@@ -5,7 +5,7 @@ from typing import Iterator, List, Optional
 
 from .base_loaders import BaseLoader as LCBaseLoader
 
-class DoclingPDFLoader(BaseLoader, LCBaseLoader):
+class DoclingLoader(BaseLoader, LCBaseLoader):
     def __init__(
             self, 
             file_path: str | list[str],
