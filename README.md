@@ -23,7 +23,7 @@ pip install docitup
 
 ### PyMUPdf4LLMLoader
  
-```bash
+```python
 from docitup import PyMUPdf4LLMLoader 
   
 loader = PyMUPdf4LLMLoader(file_path='path/to/your/file.pdf')  
