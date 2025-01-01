@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="docitup",  # same as in the toml file
-    version="0.1.0",  # same as in the toml file
+    version="0.1.1",  # same as in the toml file
     author="Panindhra",  # same as in the toml file
     author_email="phanitallapudi@gmail.com",  # same as in the toml file
-    description="",  # you can update this with a proper description
+    description="docitup is a Python package designed to simplify document processing for LangChain. It provides various loaders to extract content from different file types and convert them into LangChain-compatible document classes, ready for storage in LangChain-supported vector stores.",  # you can update this with a proper description
     long_description=open("README.md").read(),  # same as in the toml file
     long_description_content_type="text/markdown",  # typically used for markdown files
     url="https://github.com/phanitallapudi/docitup",  # replace with your actual repo URL if available
