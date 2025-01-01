@@ -67,6 +67,27 @@ Each loader can be configured with the following optional parameters:
 
 `chunk_overlap`: The number of overlapping characters between chunks (default is 100).
 
+### Example Usage with all parameters
+```python
+from docitup import LlamaparseLoader
+
+# Initialize the loader
+loader = LlamaparseLoader(
+    file_path="example.pdf",
+    api_key="your_api_key",
+    splitter_type="recursive",
+    chunk_size=500,
+    chunk_overlap=50,
+    extra_metadata={"category": "example"}
+)
+
+# Load documents lazily
+for document in loader.load():
+    print("Text Chunk:", document.text)
+    print("Metadata:", document.metadata)
+
+```
+
 ## Contributing
  
 Contributions are welcome! Please feel free to submit issues or pull requests for improvements or bug fixes.

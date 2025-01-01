@@ -1,4 +1,4 @@
-# __init__.py
+# docitup/__init__.py
 
 from .base_loaders import BaseLoader
 from .docling_loaders import DoclingLoader
