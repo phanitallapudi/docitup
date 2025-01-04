@@ -5,6 +5,7 @@ from .docling_loaders import DoclingLoader
 from .llamaparse_loaders import LlamaparseLoader
 from .markitdown_loaders import MarkitdownLoader
 from .pymupdf4llm_loaders import PyMUPdf4LLMLoader
+from .fitz_loaders import FitzPyMUPDFLoader
 
 __all__ = [
     "BaseLoader",
@@ -12,4 +13,5 @@ __all__ = [
     "LlamaparseLoader",
     "MarkitdownLoader",
     "PyMUPdf4LLMLoader",
+    "FitzPyMUPDFLoader"
 ]
