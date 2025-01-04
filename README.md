@@ -57,6 +57,14 @@ loader = DoclingLoader(file_path='path/to/your/file.pdf')
 documents = loader.load()
 ```
 
+### FitzPyMUPDFLoader
+```python
+from docitup import FitzPyMUPDFLoader
+  
+loader = FitzPyMUPDFLoader(file_path='path/to/your/file.pdf')  
+documents = loader.load()
+```
+
 ## Configuration Options
 
 Each loader can be configured with the following optional parameters:
