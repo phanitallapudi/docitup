@@ -7,6 +7,7 @@ from .markitdown_loaders import MarkitdownLoader
 from .pymupdf4llm_loaders import PyMUPdf4LLMLoader
 from .fitz_loaders import FitzPyMUPDFLoader
 from .pypdf_loaders import PyPdfLoader
+from .pypdf2_loaders import PyPdf2Loader
 
 __all__ = [
     "BaseLoader",
@@ -15,5 +16,6 @@ __all__ = [
     "MarkitdownLoader",
     "PyMUPdf4LLMLoader",
     "FitzPyMUPDFLoader",
-    "PyPdfLoader"
+    "PyPdfLoader",
+    "PyPdf2Loader"
 ]

@@ -73,6 +73,14 @@ loader = PyPdfLoader(file_path='path/to/your/file.pdf')
 documents = loader.load()
 ```
 
+### PyPdfLoader2
+```python
+from docitup import PyPdfLoader2
+  
+loader = PyPdf2Loader(file_path='path/to/your/file.pdf')  
+documents = loader.load()
+```
+
 ## Configuration Options
 
 Each loader can be configured with the following optional parameters:
