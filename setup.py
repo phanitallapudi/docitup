@@ -18,6 +18,9 @@ setup(
         "llama-index-readers-file>=0.4.1",
         "markitdown>=0.0.1a3",
         "pymupdf4llm>=0.0.17",
+        "pymupdf>=^1.25.1",
+        "pypdf>=5.1.0",
+        "pypdf2>=^3.0.1",
     ],
     extras_require={
         "dev": ["pytest>=7.0", "twine>=4.0.2"],
