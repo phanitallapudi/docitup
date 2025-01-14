@@ -29,28 +29,30 @@ class FitzPyMUPDFLoader(BaseLoader, LCBaseLoader):
         # Process each file path
         for source in self._file_paths:
             doc = fitz.open(source)
-            text: str = ""
-            for page in doc:
-                text += page.get_text() # type: ignore
+            page_num = 0
 
-            # Prepare base metadata
-            metadata = {"source": source}
-            
-            # Merge extra_metadata if provided
-            if self.extra_metadata:
-                metadata.update(self.extra_metadata)
-            
-            # Use _text_splitter to break the document into chunks
-            chunks = self._text_splitter(
-                splitter_type=self.splitter_type,
-                chunk_size=self.chunk_size,
-                chunk_overlap=self.chunk_overlap,
-                documents=text, # type: ignore
-                metadata=metadata
-            )
-            
-            # Add the chunks to the list
-            all_documents.extend(chunks)
+            for page in doc:
+                # Prepare base metadata
+                page_num += 1
+                metadata: Dict[str, Any] = {"source": source, "page_number": page_num}
+
+                text = page.get_text() # type: ignore
+
+                # Merge extra_metadata if provided
+                if self.extra_metadata:
+                    metadata.update(self.extra_metadata)
+                
+                # Use _text_splitter to break the document into chunks
+                chunks = self._text_splitter(
+                    splitter_type=self.splitter_type,
+                    chunk_size=self.chunk_size,
+                    chunk_overlap=self.chunk_overlap,
+                    documents=text, # type: ignore
+                    metadata=metadata
+                )
+                
+                # Add the chunks to the list
+                all_documents.extend(chunks)
         
         # Return the documents as an iterator
         return iter(all_documents)

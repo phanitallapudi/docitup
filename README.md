@@ -73,7 +73,7 @@ loader = PyPdfLoader(file_path='path/to/your/file.pdf')
 documents = loader.load()
 ```
 
-### PyPdfLoader2
+### PyPdf2Loader
 ```python
 from docitup import PyPdfLoader2
   

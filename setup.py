@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="docitup",  # same as in the toml file
-    version="0.1.3",  # same as in the toml file
+    version="0.1.4",  # same as in the toml file
     author="Panindhra",  # same as in the toml file
     author_email="phanitallapudi@gmail.com",  # same as in the toml file
     description="docitup is a Python package designed to simplify document processing for LangChain. It provides various loaders to extract content from different file types and convert them into LangChain-compatible document classes, ready for storage in LangChain-supported vector stores.",  # you can update this with a proper description

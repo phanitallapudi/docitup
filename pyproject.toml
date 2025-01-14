@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "docitup"
-version = "0.1.0"
+version = "0.1.4"
 description = ""
 authors = ["Panindhra <phanitallapudi@gmail.com>"]
 readme = "README.md"

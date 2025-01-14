@@ -33,8 +33,12 @@ class LlamaparseLoader(BaseLoader, LCBaseLoader):
     def lazy_load(self) -> Iterator[LCDocument]:
         documents = SimpleDirectoryReader(input_files=self._file_paths, file_extractor=self.file_extractor).load_data() # type: ignore
         all_documents: List[LCDocument] = []
-        
+        page_num = 0
+
         for doc in documents:
+            page_num += 1
+            doc.metadata['page_number'] = page_num
+
             if 'file_path' in doc.metadata:
                 doc.metadata['source'] = doc.metadata.pop('file_path')
             
